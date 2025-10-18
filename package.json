@@ -1,6 +1,6 @@
 {
   "name": "vite-project",
-  "homepage":"https://Maab3li.github.io/Simple-coffee-listing-app",
+  "homepage": "https://Maab3li.github.io/Simple-coffee-listing-app",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -15,7 +15,8 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.1.14",
     "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "react-dom": "^19.1.1",
+    "react-router-dom": "^7.9.4"
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",
