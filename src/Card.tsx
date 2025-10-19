@@ -31,7 +31,7 @@ export const Card = ({coffee}: {coffee:Coffee}) => {
     <div className="flex flex-col ">
       <div className="flex justify-start items-start">
         {coffee.popular && <span className="absolute bg-[#F6C768] m-2 py-1 px-3 text-black font-bold text-[.625rem] rounded-xl">Popular</span> }
-        <img src={coffee.image} className="rounded-xl"/>
+        <img src={coffee.image} alt={coffee.name + ' image'} loading='lazy' className="rounded-xl"/>
       </div>
       <div className="flex justify-between *:mt-3 *:tracking-[1px] ">
         <span className='text-white text-[1rem]'>{coffee.name}</span>

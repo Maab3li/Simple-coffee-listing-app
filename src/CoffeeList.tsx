@@ -42,7 +42,7 @@ export const CoffeeList:React.FC = () => {
     <div className='absolute flex flex-col bg-[#1B1D1F] *:font-dm-sans rounded-xl w-auto mt-20 pb-10 mx-5 lg:mt-40 lg:mx-10 xl:mx-25'>
         <div className='py-5 mt-1 text-center bg-[url("./assets/resources/vector.svg")] bg-auto bg-[180px_0px] bg-no-repeat lg:bg-[548px_-10px] lg:bg-size-[235px_260px] xl:bg-size-[250px_253px] xl:bg-[540px_-10px]'>
             <h2 className="text-[2rem] text-white mt-3  font-500 font-medium tracking-[2px] lg:mt-15">Our Collection</h2>
-            <p style={{color:'#6F757C'}} className="px-[6%] text-[.875rem] lg:text-[1rem] lg:px-[24%] xl:px-[28%]">
+            <p className="px-[6%] text-[#D0D1D2] text-[1rem] lg:text-[1rem] lg:px-[24%] xl:px-[28%]">
                 Introducing our Coffee Collection, a selection of unique coffees from different roast types and origins, expertly roasted in small batches and shipped fresh weekly.
             </p>
         </div>
