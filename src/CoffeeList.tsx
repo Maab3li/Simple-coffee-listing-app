@@ -5,7 +5,7 @@ import './index.css'
 import { useState } from "react"
 import { useQuery } from "@tanstack/react-query"
 import { Card } from "./Card"
-
+import { SkeletonLoader } from "react-loadly"
 
 export const CoffeeList:React.FC = () => {
 
@@ -26,10 +26,9 @@ export const CoffeeList:React.FC = () => {
     queryFn: async () => {
       const response:Response = await fetch ("https://raw.githubusercontent.com/devchallenges-io/curriculum/refs/heads/main/4-frontend-libaries/challenges/group_1/data/simple-coffee-listing-data.json")
       if(!response.ok) {
-        throw new Error('Error: ' +error)
+        throw new Error('Error: ' + error)
       }
       return response.json()
-      
     },
     staleTime: 1000 * 60 * 5,
     gcTime: 1000 * 60 * 60
@@ -46,15 +45,15 @@ export const CoffeeList:React.FC = () => {
                 Introducing our Coffee Collection, a selection of unique coffees from different roast types and origins, expertly roasted in small batches and shipped fresh weekly.
             </p>
         </div>
-        <div className="flex ml-[29.5%] lg:ml-[38%] xl:ml-[39.5%] *:text-[.875rem] gap-6 lg:gap-4 space-between *:tracking-[.8px]">
+        <div className="flex ml-[29.5%] lg:ml-[38%] xl:ml-[39.5%] *:text-[.875rem] gap-6 lg:gap-4 space-between *:font-bold *:tracking-[.8px]">
             <button onClick={handleClick} id="all-products" className={`${isSelected == 'all-products'? 'bg-[#4D5562] hover:bg-[#6F757C] text-white  py-2 px-3 rounded-[7px]' : 'bg-transparent text-white'}`}>All Products</button>
             <button onClick={handleClick} id="available-now" className={`${isSelected == 'available-now'? 'bg-[#4D5562] hover:bg-[#6F757C] text-white  py-2 px-3 rounded-[7px]' : 'bg-transparent text-white'}`}>Available Now</button>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 mx-auto mt-10 gap-10">
           {isSelected == 'all-products' && data.map((coffee:Coffee) => (
             <Card 
-            key={coffee.id}
-            coffee={coffee}
+              key={coffee.id}
+              coffee={coffee}
             />
           ))}
           {isSelected == 'available-now' && data.filter((availableCoffee:Coffee) => availableCoffee.available==true)

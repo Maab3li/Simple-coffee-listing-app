@@ -33,9 +33,9 @@ export const Card = ({coffee}: {coffee:Coffee}) => {
         {coffee.popular && <span className="absolute bg-[#F6C768] m-2 py-1 px-3 text-black font-bold text-[.625rem] rounded-xl">Popular</span> }
         <img src={coffee.image} alt={coffee.name + ' image'} loading='lazy' className="rounded-xl"/>
       </div>
-      <div className="flex justify-between *:mt-3 *:tracking-[1px] ">
+      <div className="flex justify-between *:mt-3 *:font-bold *:tracking-[1px] ">
         <span className='text-white text-[1rem]'>{coffee.name}</span>
-        <span className='bg-[#BEE3CC] py-1 px-2 text-black text-[.75rem] font-bold rounded'>{coffee.price}</span>
+        <span className='bg-[#BEE3CC] py-1 px-2 text-black text-[.75rem] rounded'>{coffee.price}</span>
       </div>
       <div className="flex flex-row gap-1 *:text-[.875rem]">
         <span>
