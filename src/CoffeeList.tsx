@@ -45,8 +45,8 @@ export const CoffeeList:React.FC = () => {
             </p>
         </div>
         <div className="flex justify-center items-center *:text-[.875rem] gap-6 lg:gap-4 space-between  *:tracking-[.8px]">
-            <button onClick={handleClick} id="all-products" className={`${isSelected == 'all-products'? 'bg-[#4D5562] hover:bg-[#6F757C] text-white  py-2 px-3 rounded-[7px]' : 'bg-transparent text-white'}`}>All Products</button>
-            <button onClick={handleClick} id="available-now" className={`${isSelected == 'available-now'? 'bg-[#4D5562] hover:bg-[#6F757C] text-white  py-2 px-3 rounded-[7px]' : 'bg-transparent text-white'}`}>Available Now</button>
+            <button onClick={handleClick} id="all-products" className={`${isSelected == 'all-products'? 'bg-gray-500 hover:bg-gray-400 text-white  py-2 px-3 rounded-[7px]' : 'bg-transparent text-white'}`}>All Products</button>
+            <button onClick={handleClick} id="available-now" className={`${isSelected == 'available-now'? 'bg-gray-400 hover:bg-gray-400 text-white  py-2 px-3 rounded-[7px]' : 'bg-transparent text-white'}`}>Available Now</button>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 mx-auto mt-10 gap-10">
           {isSelected == 'all-products' && data.map((coffee:Coffee) => (
