@@ -49,19 +49,19 @@ export const CoffeeList:React.FC = () => {
             <button onClick={handleClick} id="available-now" className={`${isSelected == 'available-now'? 'bg-gray-400 hover:bg-gray-400 text-white  py-2 px-3 rounded-[7px]' : 'bg-transparent text-white'}`}>Available Now</button>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 mx-auto mt-10 gap-10">
-          {isSelected == 'all-products' && data.map((coffee:Coffee) => (
+          {isSelected == 'all-products' && data && data.map((coffee:Coffee) => (
             <Card 
               key={coffee.id}
               coffee={coffee}
             />
           ))}
-          {isSelected == 'available-now' && data.filter((availableCoffee:Coffee) => availableCoffee.available==true)
+          {isSelected == 'available-now' && data && data.filter((availableCoffee:Coffee) => availableCoffee.available==true)
           .map((coffee:Coffee) => (
             <Card 
             key={coffee.id}
             coffee={coffee}
             />
-))}
+          ))}
         </div>
     </div>
   )
