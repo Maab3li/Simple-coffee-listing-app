@@ -4,10 +4,32 @@
     <style>
       @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&&display=swap');
     </style>
-    <link rel="print"
+    <link 
+    rel="preload"
     href="/vite-project/src/index.css"
     as="style"
     onload="this.print ='all'"
+    />
+    <link 
+    rel="preload"
+    fetchPriority ="high"
+    as="image"
+    href="/vite-project/src/assets/resources/bg-cafe-lg.jpg"
+    type="image/jpg"
+    />
+    <link 
+    rel="preload"
+    fetchPriority ="high"
+    as="image"
+    href="/vite-project/src/assets/resources/bg-cafe-sm.jpg"
+    type="image/jpg"
+    />
+    <link 
+    rel="preload"
+    fetchPriority ="high"
+    as="image"
+    href="/vite-project/src/assets/resources/bg-cafe.jpg"
+    type="image/jpg"
     />
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
