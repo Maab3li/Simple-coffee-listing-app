@@ -18,11 +18,14 @@
     "@tanstack/query-sync-storage-persister": "^5.90.7",
     "@tanstack/react-query": "^5.90.5",
     "@tanstack/react-query-persist-client": "^5.90.7",
+    "format-converter": "^1.2.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-loadly": "^2.2.0",
     "react-query": "^3.39.3",
-    "react-router-dom": "^7.9.4"
+    "react-router-dom": "^7.9.4",
+    "uuid": "^13.0.0",
+    "webp-converter": "^2.3.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",
