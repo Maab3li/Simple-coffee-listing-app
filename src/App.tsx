@@ -2,9 +2,9 @@ import type React from 'react'
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 import { PersistQueryClientProvider } from '@tanstack/react-query-persist-client';
 import { CoffeeList } from './CoffeeList'
-import smImage from '../src/assets/resources/bg-cafe-sm.jpg'
-import lgImage from '../src/assets/resources/bg-cafe-lg.jpg'
-import xlImage from '../src/assets/resources/bg-cafe.jpg'
+import smImage from '../src/assets/resources/bg-cafe-sm.webp'
+import lgImage from '../src/assets/resources/bg-cafe-lg.webp'
+import xlImage from '../src/assets/resources/bg-cafe.webp'
 import './App.css'
 import { createAsyncStoragePersister } from '@tanstack/query-async-storage-persister';
 
