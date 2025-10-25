@@ -1,7 +1,6 @@
 import { useRef, useState } from 'react'
 import starFill from './assets/resources/Star_fill.svg'
 import star from './assets/resources/Star.svg'
-import { convertImageToWebP } from './hooks/convertImageToWebp'
 
 export interface Coffee {
     available: boolean
@@ -18,9 +17,6 @@ export const Card = ({coffee}: {coffee:Coffee}) => {
 
   const [isFavourite, setIsFavourite] = useState(false)
   const favouriteRef = useRef(null) 
-  
-  const webPImageURL = convertImageToWebP(coffee.image, function(){})
-  console.log(webPImageURL)
 
   const handleClick = () => {
     if(isFavourite == true) {
