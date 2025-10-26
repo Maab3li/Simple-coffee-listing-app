@@ -26,12 +26,12 @@ const App:React.FunctionComponent =() => {
     <PersistQueryClientProvider client={queryClient} persistOptions={{persister}}>
       <QueryClientProvider client={queryClient}>
         {/*main page wrapper*/}
-        <div className='relative grid grid-rows-4 grid-cols-1 max-w-[100%] h-[320vh] lg:h-[180vh] pb-10 bg-black'>
+        <div className='relative grid grid-rows-4 grid-cols-1 w-[100%] h-[2000px] lg:h-[1100px] pb-10 bg-black'>
           {/* background image */}
-          <div className='w-full h-[50%] lg:h-[100%]'>
-            {screen.width <= 640 && <img fetchPriority='high' src={smImage} width={screen.width} height={screen.height/3}   alt='caffe image' />}
-            {screen.width <= 1024 && <img fetchPriority='high' src={lgImage} width={screen.width} height={screen.height/3} alt='caffe image' />}
-            {screen.width >= 1025 && <img fetchPriority='high' src={xlImage} width={screen.width} height={screen.height/3} alt='caffe image' />}
+          <div className='w-full h-[400px] lg:h-[500px] xl:h-[600px]'>
+            {screen.width <= 640 && <img fetchPriority='high' src={smImage} width='100%' height='400px'  alt='caffe image' />}
+            {screen.width <= 1024 && screen.width >= 641 && <img fetchPriority='high' src={lgImage} width='100%' height='500' alt='caffe image' />}
+            {screen.width >= 1025 && <img fetchPriority='high' src={xlImage} width='100%' height='600px' alt='caffe image' />}
           </div>
           {/* coffee list container */}
           <CoffeeList />
